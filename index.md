@@ -9,12 +9,12 @@ in this project we implement our Neural Network , a Neural network is simply a f
 ## our modules to build our neural network
 - Data Module "loading dataset or split the data"
 - core modules
-  1-Layers
-  2-Losses
-  3-Activation functions
--Visualization Module "Visualize the cost function versus iterations/epochs during training process"
--Evaluation Module "Implement accuracy estimation function and implement precision & recall metric for better evaluation"
--Utility Module: "This module is for saving & loading model weights & configurations into a compressed format"
+  1- Layers
+  2- Losses
+  3- Activation functions
+- Visualization Module "Visualize the cost function versus iterations/epochs during training process"
+- Evaluation Module "Implement accuracy estimation function and implement precision & recall metric for better evaluation"
+- Utility Module: "This module is for saving & loading model weights & configurations into a compressed format"
 
 ## Dataset :
 ```markdown
