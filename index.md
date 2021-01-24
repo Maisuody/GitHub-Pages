@@ -22,7 +22,62 @@ in this project we implement our Neural Network , a Neural network is simply a f
 2-Create a specific folders for training, validation & testing.
 3-Split randomly the training .csv file into training & validation dataset.
 ```
-ll use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Maisuody/GitHub-Pages/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# First module
+## load_data
+def loadData(file_path, y , indexY):
+y is the Label
+indexY the index of label
+
+def image(image_path): 
+Take the image and make resize for image then return all pixels in the image
+
+def normalization(pixels):
+Normalize any input by dividing by 255 The max value
+
+def split_dataset(all_pixels, Labels,testSize):
+testSize is th size of train 
+and Return x_train, y_train, x_tests , y_tests
+
+## build layers
+###  Layer
+- Initialization for the parameters of the class layer
+- input -- the input to the layer for forward propagation.
+  return -- computes the output of a layer for a given input
+- input -- dY = The gradient of the error with respect to previous layer,
+  input -- learning_rate = learning rate to update weights.
+  return -- computes the gradient of the error with respect to this layer and update parameters if any.
+  
+ ###  FC(Layer)
+
+- Initialization for the parameters of the class fully connected layer
+        input_size = number of input neurons
+        output_size = number of output neurons
+
+- input -- the input to the layer for forward propagation.
+        Returns:
+        return -- computes the output of a layer for a given input
+
+- input -- dY = The gradient of the error with respect to previous layer,
+        input -- learning_rate = learning rate to update weights.
+        Returns:
+        return -- computes the gradient of the error with respect to this layer and update weights.
+
+### ActivationLayer(Layer)
+- input -- activation = pass the name of the activation function,
+        input -- learning_rate = pass the name of the activation function gradient.
+
+- input -- the input to the layer for forward propagation.
+        Returns:
+        return -- computes the output of a layer for a given input
+
+- input -- dY = The gradient of the error with respect to previous layer,
+        input -- learning_rate = learning rate to update weights if any.
+        Returns:
+        return -- computes the gradient of the error with respect to this activation
+        
+### Flatten(Layer)    
+
+
 
 ```markdown
 Syntax highlighted code block
