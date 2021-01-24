@@ -22,7 +22,7 @@ in this project we implement our Neural Network , a Neural network is simply a f
 2-Create a specific folders for training, validation & testing.
 3-Split randomly the training .csv file into training & validation dataset.
 ```
-# First module
+# modules
 ## load_data
 def loadData(file_path, y , indexY):
 y is the Label
@@ -39,7 +39,7 @@ testSize is th size of train
 and Return x_train, y_train, x_tests , y_tests
 
 ## build layers
-###  Layer
+### Layer
 - Initialization for the parameters of the class layer
 - input -- the input to the layer for forward propagation.
   return -- computes the output of a layer for a given input
@@ -47,7 +47,7 @@ and Return x_train, y_train, x_tests , y_tests
   input -- learning_rate = learning rate to update weights.
   return -- computes the gradient of the error with respect to this layer and update parameters if any.
   
- ###  FC(Layer)
+### FC(Layer)
 
 - Initialization for the parameters of the class fully connected layer
         input_size = number of input neurons
@@ -61,7 +61,6 @@ and Return x_train, y_train, x_tests , y_tests
         input -- learning_rate = learning rate to update weights.
         Returns:
         return -- computes the gradient of the error with respect to this layer and update weights.
-
 ### ActivationLayer(Layer)
 - input -- activation = pass the name of the activation function,
         input -- learning_rate = pass the name of the activation function gradient.
@@ -74,7 +73,7 @@ and Return x_train, y_train, x_tests , y_tests
         input -- learning_rate = learning rate to update weights if any.
         Returns:
         return -- computes the gradient of the error with respect to this activation
-        
+       
 ### Flatten(Layer)    
 - input -- x = the input from the previous layer,
         Returns:
@@ -86,6 +85,7 @@ and Return x_train, y_train, x_tests , y_tests
         while we aren't using the input parameters but to follow the notation of backward function in all layers
         Returns:
         return -- changes the shape of the previous layer to be as the input in the forward propagation which stored in input.shape
+
 ### Conv_layer(Layer)
 - Function to apply one filter to input slice.
         :param input:[numpy array]: slice of input data of shape (f, f, n_C_prev)
@@ -143,6 +143,7 @@ and Return x_train, y_train, x_tests , y_tests
     x -- Output of the previous layer, of any shape.
     Returns:
     return -- gradient of activation softmax(x) for back propagation
+    
 ## Losses
 - class for losses have two function for every type of loss functions 
     1-Forward function 
@@ -199,6 +200,7 @@ and Return x_train, y_train, x_tests , y_tests
             :param  y_hat  : numpy array of Y labeled . 'no_of_sample * no of nodes'
             :param Y_label : numpy array of X is output of final layer. 'no_of_sample * 1'
             :return : numpy array of X is output of grad with dim 'no_of_sample * no of nodes'
+            
 ## Evaluation metrics          
 - calc tn for certain class number
 - takes label, predicted_value as vectors
@@ -211,11 +213,14 @@ and Return x_train, y_train, x_tests , y_tests
         return recall
 - takes label , predicted_value as vectors
         return F1_score
+        
 ## visualizing data
 - draw graph between number of epochs on x-axis and losses on y-axis
+
 ## save and write model (pickle)
 - saves model into a file named 'filename'
 - loads a model from a file and returns model
+
 ## model
 - return losses
 - adds layers to the model
@@ -236,6 +241,7 @@ and Return x_train, y_train, x_tests , y_tests
         :param y_train: the true values
         :param epochs: number of epochs
         :param learning_rate: the learning rate of the parameters
+        
 ## utils
 - :param shape:
     :return:
